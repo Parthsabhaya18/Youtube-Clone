@@ -17,15 +17,22 @@ import {  CgMediaLive } from "react-icons/cg";
 import { SiYoutubegaming } from "react-icons/si";
 import { MdPodcasts } from "react-icons/md";
 import { BiLike, BiVideo } from "react-icons/bi";
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Sidebar() {
 
+    let navigate = useNavigate();
+
+    function change(){
+        navigate(`/`)
+    }
+
     const sidebarItems=[
         {
             id:1,
-            name:"Home",
-            icon:<GoHome/>
+            name:"Home" ,
+            icon:<GoHome onClick={change}/>
         },
         {
             id:1,
@@ -188,7 +195,7 @@ export default function Sidebar() {
 
 
   return (
-   <div className='px-6 w-[20%] h-[calc(100vh-6.625rem)] overflow-y-scroll  overflow-x-hidden mt-20 scrollbar-with:thin '>
+   <div className='px-6 text-[14px] w-[25%] h-[calc(100vh-6.625rem)] overflow-y-scroll  overflow-x-hidden'>
 
     {/* Home  */}
 
@@ -197,9 +204,9 @@ export default function Sidebar() {
        {
         sidebarItems.map((item)=>{
             return(
-                <div className='flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1'>
+                <div  key={item.id} className='flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1'>
                     <div className='text-xl cursor-pointer'>{item.icon}</div>
-                    <span className='cursor-pointer'>{item.name}</span>
+                    <span className=' cursor-pointer'>{item.name}</span>
                 </div>
             )
         })
@@ -219,7 +226,7 @@ export default function Sidebar() {
        {
         sidebarItems2.map((item)=>{
             return(
-                <div className='flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1'>
+                <div key={item.id} className='flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1'>
                     <div className='text-xl cursor-pointer'>{item.icon}</div>
                     <span className='cursor-pointer'>{item.name}</span>
                 </div>
@@ -239,7 +246,7 @@ export default function Sidebar() {
        {
         sidebarItems3.map((item)=>{
             return(
-                <div className='flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1'>
+                <div key={item.id} className='flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1'>
                     <div className='text-xl cursor-pointer'>{item.icon}</div>
                     <span className='cursor-pointer'>{item.name}</span>
                 </div>
@@ -260,7 +267,7 @@ export default function Sidebar() {
        {
         sidebarItems4.map((item)=>{
             return(
-                <div className='flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1'>
+                <div key={item.id} className='flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1'>
                     <div className='text-xl cursor-pointer text-red-500'>{item.icon}</div>
                     <span className='cursor-pointer'>{item.name}</span>
                 </div>
@@ -278,7 +285,7 @@ export default function Sidebar() {
        {
         sidebarItems5.map((item)=>{
             return(
-                <div className='flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1'>
+                <div key={item.id} className='flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1'>
                     <div className='text-xl cursor-pointer'>{item.icon}</div>
                     <span className='cursor-pointer'>{item.name}</span>
                 </div>
@@ -294,7 +301,7 @@ export default function Sidebar() {
     <br />
        <p className='text-xs font-semibold text-gray-600'>About Press Copyright <br /> Contact us Creators <br /> Advertise Developers <br />
        <br />
-       <p>Terms Privacy Policy & Safety <br /> How YouTube works <br /> Test new features</p>
+       <p className='text-xs font-semibold text-gray-600'>Terms Privacy Policy & Safety <br /> How YouTube works <br /> Test new features</p>
        </p><br />
        <p className='text-xs text-gray-500 mt-1'>© 2024 Google LLC</p>
    </div>

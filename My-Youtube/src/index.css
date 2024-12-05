@@ -2,5 +2,8 @@
 *{
     scrollbar-width: thin;
 }
+.list{
+    scrollbar-width:none ;
+}
 @tailwind components;
 @tailwind utilities;
