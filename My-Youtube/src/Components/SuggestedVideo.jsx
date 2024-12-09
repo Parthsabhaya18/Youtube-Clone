@@ -34,15 +34,17 @@ export default function SuggestedVideo({Video}) {
                 )}
               </span>
 
-              <div className="flex text-gray-500 text-[12px]">
+              <div className="flex flex-col text-gray-500 text-[12px]">
                 <span>{`${abbreviateNumber(
                   Video?.stats?.views,
                   2
                 )} views`}</span>
-                <span className="flex text-[24px] leading-none font-bold relative top-[-10px] mx-1">
+                <span className='flex items-center relative bottom-2 right-1'>
+                <span className="text-[24px] leading-none font-bold relative top-[-7px] mx-1">
                   .
                 </span>
                 <span>{Video?.publishedTimeText}</span>
+                </span>
               </div>
             </div>
           </div>
