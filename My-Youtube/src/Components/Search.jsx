@@ -24,11 +24,12 @@ export default function Search() {
   }
 
   return (
-    <div className=''>
+    <>
       <div className='mt-24 flex flex-row h-[calc(100%-56px)]'>
+
         <Sidebar/>
 
-        <div className="grow h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden">
+        <div className="grow h-[calc(100vh-6.625rem)] overflow-y-scroll w-[172%] overflow-x-hidden">
           <div className=" grid grid-cols-1 gap-2 p-2">
           {result?.map((item, index) => {
               if (item?.type !== "video") return false;
@@ -37,6 +38,6 @@ export default function Search() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }

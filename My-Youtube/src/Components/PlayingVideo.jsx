@@ -44,9 +44,9 @@ export default function PlayingVideo() {
 
   return (
     <div className=" flex justify-center mr-5 flex-row h-[calc(100%-56px)] mt-16 ">
-      <div className="w-full max-w-[1580px]  flex flex-col lg:flex-row md:mx-24">
-        <div className="flex flex-col lg:w-[calc(100%-540px)] xl:w-[72%] px-4 py-3 lg:py-6">
-          <div className="h-[400px] md:h-[400px] ml-[-16px] mr-[-16px] lg:ml-0 lg:mr-0 ">
+      <div className="w-full max-w-[1580px]  flex flex-col mx-5 lg:flex-row md:mx-5">
+        <div className="flex flex-col lg:w-[calc(100%-540px)] lg:w-[95%] px-2 py-3 lg:py-6">
+          <div className="h-[400px] md:h-[450px] ml-[-16px] mr-[-16px] lg:ml-0 lg:h-[500px] lg:mr-0 ">
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
               height="100%"

@@ -8,7 +8,7 @@ export default function Home() {
   const { data,loading } = useAuth();
   console.log(data);
   return (
-    <div className="flex mt-20">
+    <div className="flex mt-20 ">
       <Sidebar />
       <div className="h-[calc(100vh-6.625rem)] overflow-y-scroll  overflow-x-hidden scrollbar-with:thin">
         <ListItems/>

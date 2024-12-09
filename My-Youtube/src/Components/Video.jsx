@@ -8,7 +8,7 @@ export default function Video({ Video }) {
   return (
     <div className="">
       <Link to={`/video/${Video?.videoId}`}>
-        <div className=" flex flex-col ">
+        <div className=" flex flex-col">
           {/* Thumbnail & duration */}
           <div className="relative md: rounded-xl hover:rounded-none duration-200  overflow-hidden">
             <img

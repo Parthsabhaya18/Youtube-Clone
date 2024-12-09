@@ -8,9 +8,9 @@ export default function SearchCard({ video }) {
   console.log(video);
 
   return (
-    <div>
+    <div >
       <Link to={`/video/${video?.videoId}`}>
-        <div className="flex flex-col md:flex-row  mb-8 md:mb-3  md:p-4">
+        <div className="flex flex-col md:flex-row  mb-8 md:mb-3">
           <div>
             <div className="relative flex h-48  md:w-80 ">
               <img
