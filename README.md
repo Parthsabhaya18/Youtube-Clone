@@ -1,7 +1,7 @@
 # 📺 My-YouTube Clone
  - Welcome to My-YouTube Clone, a fully responsive and feature-rich web application built to simulate the functionality of YouTube. 
  - This project leverages the YouTube Data API for real-time video fetching, offering users a seamless browsing experience.
- - 
+
 ## Deployment
 The application is deployed and accessible at https://zp-youtube.vercel.app/
 
